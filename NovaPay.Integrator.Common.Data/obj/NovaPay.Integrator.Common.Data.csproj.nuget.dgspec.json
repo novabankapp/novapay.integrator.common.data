@@ -1,0 +1,89 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
+      "version": "1.1.5",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
+        "projectName": "NovaPay.Integrator.Common.Data",
+        "projectPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
+        "packagesPath": "C:\\Users\\msasa.l\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\msasa.l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\msasa.l\\source\\repos\\NugetRepo\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Common.Libraries.EventBus.Kafka": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Common.Libraries.Services": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Common.Libraries.Services.EFCore": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

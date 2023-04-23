@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.1.5</Version>
+  </PropertyGroup>
+
+	<ItemGroup>
+		
+		<PackageReference Include="Common.Libraries.Services" Version="1.2.0" />
+		<PackageReference Include="Common.Libraries.Services.EFCore" Version="1.2.0" />
+		<PackageReference Include="Common.Libraries.EventBus.Kafka" Version="1.1.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
+	</ItemGroup>
+
+</Project>

@@ -20,5 +20,7 @@ namespace NovaPay.Integrator.Common.Data.DTOs
         public MerchantDto? Merchant { get; set; }
 
         public bool IsAsync { get; set; }
+
+        public bool IsValidation { get; set; }  
     }
 }

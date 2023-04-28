@@ -24,5 +24,7 @@ namespace NovaPay.Integrator.Common.Data.Entities
         public Merchant? Merchant { get; set; }
 
         public bool IsAsync { get; set; }
+
+        public bool IsValidation { get; set; }
     }
 }

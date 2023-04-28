@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "NovaPay.Integrator.Common.Data/1.1.5": {
+      "NovaPay.Integrator.Common.Data/1.1.6": {
         "dependencies": {
           "Common.Libraries.EventBus.Kafka": "1.1.1",
           "Common.Libraries.Services": "1.2.0",
@@ -755,7 +755,7 @@
     }
   },
   "libraries": {
-    "NovaPay.Integrator.Common.Data/1.1.5": {
+    "NovaPay.Integrator.Common.Data/1.1.6": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

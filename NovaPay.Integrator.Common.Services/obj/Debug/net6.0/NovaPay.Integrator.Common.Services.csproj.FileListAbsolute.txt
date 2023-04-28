@@ -1,0 +1,12 @@
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Debug\net6.0\NovaPay.Integrator.Common.Services.deps.json
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Debug\net6.0\NovaPay.Integrator.Common.Services.dll
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Debug\net6.0\NovaPay.Integrator.Common.Services.pdb
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.csproj.AssemblyReference.cache
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.AssemblyInfoInputs.cache
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.AssemblyInfo.cs
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.csproj.CoreCompileInputs.cache
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.dll
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\refint\NovaPay.Integrator.Common.Services.dll
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\NovaPay.Integrator.Common.Services.pdb
+C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Debug\net6.0\ref\NovaPay.Integrator.Common.Services.dll

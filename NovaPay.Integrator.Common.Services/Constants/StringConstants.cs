@@ -11,5 +11,7 @@ namespace NovaPay.Integrator.Common.Services.Constants
         public const string IDENTITYSCHEME = "IdentityScheme";
         public const string USERSCHEME = "UserScheme";
         public const string MULTISCHEMES = "MultiAuthSchemes";
+        public const string ADMIN = "Admin";
+        public const string Role = "Role";
     }
 }

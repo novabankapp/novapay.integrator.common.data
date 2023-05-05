@@ -2677,7 +2677,7 @@
     "C:\\Users\\msasa.l\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.1.6",
+    "version": "1.1.11",
     "restore": {
       "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
       "projectName": "NovaPay.Integrator.Common.Data",

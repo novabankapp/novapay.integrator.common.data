@@ -23,6 +23,8 @@ namespace NovaPay.Integrator.Common.Data.DTOs
         
         public decimal? Amount { get; set; }
 
+        public string UserId { get; set; }
+
         public bool Used { get; set; }
 
         public string? ServiceUniqueIdentifier { get; set; }

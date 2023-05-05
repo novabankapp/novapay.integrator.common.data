@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using NovaPay.Integrator.Common.Services.Constants;
+using NovaPay.Integrator.Common.Services.Settings;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -14,6 +15,17 @@ using System.Threading.Tasks;
 
 namespace NovaPay.Integrator.Common.Services.Dependencies
 {
+    public static class ServiceDependencies
+    {
+        public static void RegisterServices(this IServiceCollection services, IConfiguration Configuration)
+        {
+            services.AddTransient<ITokenSettings,TokenSettings>();
+            services.AddTransient<IEmailSettings, EmailSettings>();
+            services.AddTransient<IWebhookSettings, WebhookSettings>();
+            services.AddTransient<IGoogleSettings, GoogleSettings>();
+            services.AddTransient<IIdentityServerSettings, IdentityServerSettings>();
+        }
+    }
     public static class AuthorizationDependencies
     {
         public static void RegisterAuthenticationServices(this IServiceCollection services, IConfiguration Configuration)
@@ -23,7 +35,16 @@ namespace NovaPay.Integrator.Common.Services.Dependencies
             var audience = Configuration.GetSection("Token").GetSection("JwtAudience")?.Value;
             services.AddAuthorization(options =>
             {
-
+                options.AddPolicy(
+                         StringConstants.ADMIN,
+                         policyBuilder => policyBuilder.RequireAssertion(
+                             context => {
+                                
+                                 var roles = context.User.Claims.Where(c => c.Type == StringConstants.Role).FirstOrDefault()?.Value;
+                                 return roles.Contains(StringConstants.ADMIN);
+                             }
+                     )
+                  );
                 var identityJwtSchemePolicyBuilder = new AuthorizationPolicyBuilder(StringConstants.IDENTITYSCHEME);
                 options.AddPolicy(StringConstants.IDENTITYSCHEME, identityJwtSchemePolicyBuilder
                     .RequireAuthenticatedUser()

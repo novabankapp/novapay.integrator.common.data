@@ -106,8 +106,10 @@ namespace NovaPay.Integrator.Common.Services.Dependencies
                     {
                         var token = authorization.Substring("Bearer ".Length).Trim();
                         var jwtHandler = new JwtSecurityTokenHandler();
+                        var roles = context.User.Claims.Where(c => c.Type == StringConstants.Role).FirstOrDefault()?.Value;
+                        var isAdmin = roles != null ? roles.Contains(StringConstants.ADMIN) : false;
                         return (jwtHandler.CanReadToken(token) && jwtHandler.ReadJwtToken(token).Issuer.Equals(issuer))
-                            ? StringConstants.USERSCHEME : StringConstants.IDENTITYSCHEME;
+                            ? (isAdmin ? StringConstants.ADMIN : StringConstants.USERSCHEME ) : StringConstants.IDENTITYSCHEME;
                     }
                     return JwtBearerDefaults.AuthenticationScheme;
                 };

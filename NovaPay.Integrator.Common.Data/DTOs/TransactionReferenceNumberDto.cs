@@ -16,6 +16,10 @@ namespace NovaPay.Integrator.Common.Data.DTOs
 
         public string? CustomerReference { get; set; }
 
+        public string? CustomerDetails { get; set; }
+
+        public string? QRCodePath { get; set; }
+
         public MerchantDto? Merchant { get; set; }
 
         public FinancialInstitutionDto? FinancialInstitution { get; set; }
@@ -34,5 +38,7 @@ namespace NovaPay.Integrator.Common.Data.DTOs
         public string? Metadata { get; set; }
 
         public DateTime? CreatedAt { get; set; }
+
+        public DateTime? ExpiryDate { get; set; }
     }
 }

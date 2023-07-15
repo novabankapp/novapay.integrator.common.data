@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj": {
-      "version": "1.0.7",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
         "projectName": "NovaPay.Integrator.Common.Services",
@@ -23,7 +23,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Users\\msasa.l\\source\\repos\\NugetRepo\\packages": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/NBS-BANK/index.json": {},
+          "https://nuget.pkg.github.com/novabankapp/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -41,6 +43,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BarCode": {
+              "target": "Package",
+              "version": "[2023.7.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.14, )"
@@ -52,6 +58,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
             }
           },
           "imports": [

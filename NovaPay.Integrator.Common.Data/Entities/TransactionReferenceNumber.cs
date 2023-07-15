@@ -39,10 +39,16 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public int MerchantRecordId { get; set; }
 
+        public string? CustomerDetails { get; set; }
+
+        public string? QRCodePath { get; set; }
+
         public int FinancialInstitutionRecordId { get; set; }
 
         public string? Metadata { get; set; }
 
         public DateTime? CreatedAt { get; set; }
+
+        public DateTime? ExpiryDate { get; set; }
     }
 }

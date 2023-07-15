@@ -21,6 +21,10 @@ namespace NovaPay.Integrator.Common.Data.DTOs
 
         public bool IsLocked { get; set; }
 
+        public ICollection<UserConnectionDto> Connections { get; set; }
+
+        public ICollection<NotificationDto> Notifications { get; set; }
+
         public bool IsDeactivated { get; set; }
 
         public string PrivateKey { get; set; }

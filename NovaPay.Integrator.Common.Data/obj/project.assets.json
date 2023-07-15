@@ -2677,7 +2677,7 @@
     "C:\\Users\\msasa.l\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.1.11",
+    "version": "1.1.22",
     "restore": {
       "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
       "projectName": "NovaPay.Integrator.Common.Data",
@@ -2695,7 +2695,9 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Users\\msasa.l\\source\\repos\\NugetRepo\\packages": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/NBS-BANK/index.json": {},
+        "https://nuget.pkg.github.com/novabankapp/index.json": {}
       },
       "frameworks": {
         "net6.0": {

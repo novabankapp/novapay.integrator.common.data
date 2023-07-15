@@ -22,6 +22,10 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public string PublicKey { get; set; }
         public string ProfilePicPath { get; set; }
+
+        public ICollection<UserConnection> Connections { get; set; }
+
+        public ICollection<Notification> Notifications { get; set; }
         
         public ICollection<RefreshToken> RefreshTokens { get; set; }
     }

@@ -27,6 +27,8 @@ namespace NovaPay.Integrator.Common.Data.Entities
         public string FinancialServiceName { get; set; }
         public int FinancialInstitutionCategoryRecordId { get; set; } 
 
+        public FinancialInstitutionConfig Config { get; set; }
+
         public FinancialInstitutionCategory? FinancialInstitutionCategory { get; set; }
 
         public ICollection<TransactionReferenceNumber>? TRNs { get; set; }

@@ -19,20 +19,14 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public int MerchantRecordId { get; set; }
 
-        public bool HasValidation { get; set; } 
+        public MerchantValidationConfig? ValidationConfig { get; set; }
 
-        public string? ApiSecretKey { get; set; }
+        public MerchantApiKeyConfig? ApiKeyConfig { get; set; }
 
-        public string? ApiPublishableKey { get; set; }
-
-        public string? PaymentEventWebhook { get; set; }
-
-        public string? PaymentEventWebhookSecret { get; set; }
-
-        public string? PaymentEventWebhookId { get; set; }
+        public MerchantWebhookConfig? WebhookConfig { get; set; }
 
         public Merchant? Merchant { get; set; }
 
-        public bool HasApi { get; set; }
+        public MerchantApiConfig ApiConfig { get; set; }
     }
 }

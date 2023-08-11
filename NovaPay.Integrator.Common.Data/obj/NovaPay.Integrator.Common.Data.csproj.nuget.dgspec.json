@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
-      "version": "1.1.22",
+      "version": "1.1.30",
       "restore": {
         "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
         "projectName": "NovaPay.Integrator.Common.Data",
@@ -43,17 +43,29 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Collection": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "AutoMapper.Extensions.ExpressionMapping": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
             "Common.Libraries.EventBus.Kafka": {
               "target": "Package",
-              "version": "[1.1.1, )"
+              "version": "[1.1.5, )"
             },
             "Common.Libraries.Services": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.2.6, )"
             },
             "Common.Libraries.Services.EFCore": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.2.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -65,7 +77,7 @@
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

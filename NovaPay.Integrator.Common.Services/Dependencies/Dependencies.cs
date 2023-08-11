@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using NovaPay.Integrator.Common.Services.Constants;
 using NovaPay.Integrator.Common.Services.QRCodeGenerate;
+using NovaPay.Integrator.Common.Services.QRCoding;
 using NovaPay.Integrator.Common.Services.Settings;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,9 @@ namespace NovaPay.Integrator.Common.Services.Dependencies
             services.AddTransient<IEmailSettings, EmailSettings>();
             services.AddTransient<IWebhookSettings, WebhookSettings>();
             services.AddTransient<IGoogleSettings, GoogleSettings>();
+            services.AddTransient<IGeneralApiSettings, GeneralApiSettings>();
             services.AddTransient<IIdentityServerSettings, IdentityServerSettings>();
-            services.AddTransient<IQRCodeService, QRCodeService>();
+            services.AddTransient<IQRCodeService, ORCodeService>();
         }
     }
     public static class AuthorizationDependencies

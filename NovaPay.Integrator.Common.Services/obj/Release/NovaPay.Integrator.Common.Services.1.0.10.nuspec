@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NovaPay.Integrator.Common.Services</id>
+    <version>1.0.10</version>
+    <authors>NovaPay.Integrator.Common.Services</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="NovaPay.Integrator.Common.Data" version="1.1.24" exclude="Build,Analyzers" />
+        <dependency id="BarCode" version="2023.7.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="6.0.14" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="QRCoder" version="1.4.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Services.dll" target="lib\net6.0\NovaPay.Integrator.Common.Services.dll" />
+  </files>
+</package>

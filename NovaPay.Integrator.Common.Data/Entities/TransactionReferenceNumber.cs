@@ -43,7 +43,7 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public string? QRCodePath { get; set; }
 
-        public int FinancialInstitutionRecordId { get; set; }
+        public int? FinancialInstitutionRecordId { get; set; }
 
         public string? Metadata { get; set; }
 

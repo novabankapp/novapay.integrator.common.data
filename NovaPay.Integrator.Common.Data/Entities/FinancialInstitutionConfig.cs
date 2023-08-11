@@ -14,6 +14,10 @@ namespace NovaPay.Integrator.Common.Data.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RecordId { get; set; }
+
+        public FinancialInstitution FinancialInstitution { get; set; }
+
+        public int FinancialInstitutionRecordId { get; set; }
         public string? PaymentEventWebhook { get; set; }
         public string? PaymentEventWebhookId { get; set; }
         public string? PaymentEventWebhookSecret { get; set; }

@@ -300,6 +300,33 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     b.ToTable("MerchantLocalValidationConfigs");
                 });
 
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantPaymentResponseMapping", b =>
+                {
+                    b.Property<int>("RecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("LocalResponseField")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MerchantRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MerchantResponseField")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("RecordId");
+
+                    b.HasIndex("MerchantRecordId");
+
+                    b.ToTable("MerchantPaymentResponseMappings");
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantProcess", b =>
                 {
                     b.Property<int>("RecordId")
@@ -353,6 +380,33 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("MerchantValidationConfigs");
+                });
+
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantValidationResponseMapping", b =>
+                {
+                    b.Property<int>("RecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastUpdated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("LocalResponseField")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MerchantRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MerchantResponseField")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("RecordId");
+
+                    b.HasIndex("MerchantRecordId");
+
+                    b.ToTable("MerchantValidationResponseMappings");
                 });
 
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantWebhookConfig", b =>
@@ -814,6 +868,15 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantPaymentResponseMapping", b =>
+                {
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.Merchant", null)
+                        .WithMany("MerchantPaymentResponseMappings")
+                        .HasForeignKey("MerchantRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantProcess", b =>
                 {
                     b.HasOne("NovaPay.Integrator.Common.Data.Entities.Merchant", "Merchant")
@@ -834,6 +897,15 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("MerchantConfig");
+                });
+
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantValidationResponseMapping", b =>
+                {
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.Merchant", null)
+                        .WithMany("MerchantValidationResponseMappings")
+                        .HasForeignKey("MerchantRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.MerchantWebhookConfig", b =>
@@ -925,7 +997,11 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 {
                     b.Navigation("MerchantConfig");
 
+                    b.Navigation("MerchantPaymentResponseMappings");
+
                     b.Navigation("MerchantProcesses");
+
+                    b.Navigation("MerchantValidationResponseMappings");
 
                     b.Navigation("RequestLogs");
 

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.3</Version>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="NovaPay.Integrator.Common.Services" Version="1.0.17" />
+	</ItemGroup>
+
+
+
+
+</Project>

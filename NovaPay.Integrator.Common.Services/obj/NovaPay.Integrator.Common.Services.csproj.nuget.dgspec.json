@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj": {}
+    "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
-      "version": "1.1.30",
+    "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
+      "version": "1.1.33",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
         "projectName": "NovaPay.Integrator.Common.Data",
-        "projectPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
-        "packagesPath": "C:\\Users\\msasa.l\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj",
+        "packagesPath": "C:\\Users\\LENOVO-LEGION 5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msasa.l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO-LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\msasa.l\\source\\repos\\NugetRepo\\packages": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/NBS-BANK/index.json": {},
           "https://nuget.pkg.github.com/novabankapp/index.json": {}
@@ -86,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,21 +95,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj": {
-      "version": "1.0.17",
+    "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj": {
+      "version": "1.0.18",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
         "projectName": "NovaPay.Integrator.Common.Services",
-        "projectPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
-        "packagesPath": "C:\\Users\\msasa.l\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
+        "packagesPath": "C:\\Users\\LENOVO-LEGION 5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msasa.l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO-LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,7 +117,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\msasa.l\\source\\repos\\NugetRepo\\packages": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/NBS-BANK/index.json": {},
           "https://nuget.pkg.github.com/novabankapp/index.json": {}
@@ -126,8 +125,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
-                "projectPath": "C:\\Users\\msasa.l\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj"
+              "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj": {
+                "projectPath": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Data\\NovaPay.Integrator.Common.Data.csproj"
               }
             }
           }
@@ -181,7 +180,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -190,7 +190,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

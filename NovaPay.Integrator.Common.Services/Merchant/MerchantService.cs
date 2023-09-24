@@ -29,6 +29,7 @@ namespace NovaPay.Integrator.Common.Services.Services.Merchants
                              $"{nameof(Merchant.MerchantConfig)}.{nameof(MerchantConfig.WebhookConfig)}",
                              $"{nameof(Merchant.MerchantConfig)}.{nameof(MerchantConfig.ApiConfig)}",
                              $"{nameof(Merchant.MerchantConfig)}.{nameof(MerchantConfig.ApiKeyConfig)}",
+                              nameof(Merchant.MerchantPaymentResponseMappings), nameof(Merchant.MerchantValidationResponseMappings),
                              $"{nameof(Merchant.MerchantConfig)}.{nameof(MerchantConfig.ApiConfig)}.{nameof(MerchantApiConfig.GeneralApiConfig)}"}); 
             if (response != null)
             {

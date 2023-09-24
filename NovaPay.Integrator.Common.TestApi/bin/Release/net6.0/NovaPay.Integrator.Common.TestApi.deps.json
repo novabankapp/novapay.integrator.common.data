@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
-          "NovaPay.Integrator.Common.Data": "1.1.29",
+          "NovaPay.Integrator.Common.Data": "1.1.33",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -1084,7 +1084,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Data/1.1.29": {
+      "NovaPay.Integrator.Common.Data/1.1.33": {
         "dependencies": {
           "AutoMapper": "10.1.1",
           "AutoMapper.Collection": "7.0.1",
@@ -1773,7 +1773,7 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "NovaPay.Integrator.Common.Data/1.1.29": {
+    "NovaPay.Integrator.Common.Data/1.1.33": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

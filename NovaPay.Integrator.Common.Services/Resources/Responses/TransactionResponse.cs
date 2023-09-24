@@ -17,5 +17,7 @@ namespace NovaPay.Integrator.Common.Services.Resources.Responses
         [JsonPropertyName("payload")]
         [JsonProperty("payload")]
         public object? Payload { get; set; }
+
+
     }
 }

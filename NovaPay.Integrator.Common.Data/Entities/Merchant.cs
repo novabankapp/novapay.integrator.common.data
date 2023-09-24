@@ -29,6 +29,10 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public int MerchantCategoryRecordId { get; set; }
 
+        public ICollection<MerchantValidationResponseMapping> MerchantValidationResponseMappings { get; set; }
+
+        public ICollection<MerchantPaymentResponseMapping> MerchantPaymentResponseMappings { get; set; }
+
         public ICollection<TransactionReferenceNumber>? TRNs { get; set; }
 
         public MerchantCategory? MerchantCategory { get; set; } 

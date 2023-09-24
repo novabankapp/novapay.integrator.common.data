@@ -13,3 +13,18 @@ C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Commo
 C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Data.dll
 C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Data.pdb
 C:\Users\msasa.l\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.csproj.CopyComplete
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Services.deps.json
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Services.dll
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Services.pdb
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Data.dll
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\bin\Release\net6.0\NovaPay.Integrator.Common.Data.pdb
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.csproj.AssemblyReference.cache
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.AssemblyInfoInputs.cache
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.AssemblyInfo.cs
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.csproj.CopyComplete
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.dll
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\refint\NovaPay.Integrator.Common.Services.dll
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\NovaPay.Integrator.Common.Services.pdb
+C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Common.Services\obj\Release\net6.0\ref\NovaPay.Integrator.Common.Services.dll

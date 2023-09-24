@@ -42,6 +42,10 @@ namespace NovaPay.Integrator.Common.Context
 
         public DbSet<MerchantValidationConfig> MerchantValidationConfigs { get; set; }
 
+        public DbSet<MerchantPaymentResponseMapping> MerchantPaymentResponseMappings { get; set; }
+
+        public DbSet<MerchantValidationResponseMapping> MerchantValidationResponseMappings { get; set; }
+
         public DbSet<MerchantApiConfig> MerchantApiConfigs { get; set; }
       
         public DbSet<TransactionReferenceNumber>? TransactionReferenceNumbers { get; set; }

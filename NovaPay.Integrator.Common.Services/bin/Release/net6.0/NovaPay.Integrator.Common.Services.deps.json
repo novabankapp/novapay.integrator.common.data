@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "NovaPay.Integrator.Common.Services/1.0.17": {
+      "NovaPay.Integrator.Common.Services/1.0.18": {
         "dependencies": {
           "BarCode": "2023.7.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.14",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "NovaPay.Integrator.Common.Data": "1.1.30",
+          "NovaPay.Integrator.Common.Data": "1.1.33",
           "QRCoder": "1.4.3",
           "SixLabors.ImageSharp": "3.0.1",
           "System.Drawing.Common": "7.0.0",
@@ -1145,7 +1145,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Data/1.1.30": {
+      "NovaPay.Integrator.Common.Data/1.1.33": {
         "dependencies": {
           "AutoMapper": "10.1.1",
           "AutoMapper.Collection": "7.0.1",
@@ -1164,7 +1164,7 @@
     }
   },
   "libraries": {
-    "NovaPay.Integrator.Common.Services/1.0.17": {
+    "NovaPay.Integrator.Common.Services/1.0.18": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1876,7 +1876,7 @@
       "path": "zxing.net/0.16.9",
       "hashPath": "zxing.net.0.16.9.nupkg.sha512"
     },
-    "NovaPay.Integrator.Common.Data/1.1.30": {
+    "NovaPay.Integrator.Common.Data/1.1.33": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

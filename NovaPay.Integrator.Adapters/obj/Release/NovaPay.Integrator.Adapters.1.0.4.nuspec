@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NovaPay.Integrator.Adapters</id>
+    <version>1.0.4</version>
+    <authors>NovaPay.Integrator.Adapters</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="NovaPay.Integrator.Common.Services" version="1.0.20" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\LENOVO-LEGION 5\source\repos\NovaPay.Integrator.Common\NovaPay.Integrator.Adapters\bin\Release\net6.0\NovaPay.Integrator.Adapters.dll" target="lib\net6.0\NovaPay.Integrator.Adapters.dll" />
+  </files>
+</package>

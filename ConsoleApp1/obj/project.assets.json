@@ -1176,7 +1176,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Data/1.1.30": {
+      "NovaPay.Integrator.Common.Data/1.1.34": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "10.1.1",
@@ -1200,14 +1200,14 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Services/1.0.17": {
+      "NovaPay.Integrator.Common.Services/1.0.20": {
         "type": "package",
         "dependencies": {
           "BarCode": "2023.7.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.14",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "NovaPay.Integrator.Common.Data": "1.1.30",
+          "NovaPay.Integrator.Common.Data": "1.1.34",
           "QRCoder": "1.4.3",
           "SixLabors.ImageSharp": "3.0.1",
           "System.Drawing.Common": "7.0.0",
@@ -1807,11 +1807,11 @@
           }
         }
       },
-      "NovaPay.Integrator.Adapters/1.0.3": {
+      "NovaPay.Integrator.Adapters/1.0.7": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "NovaPay.Integrator.Common.Services": "1.0.17"
+          "NovaPay.Integrator.Common.Services": "1.0.20"
         },
         "compile": {
           "bin/placeholder/NovaPay.Integrator.Adapters.dll": {}
@@ -3200,26 +3200,26 @@
         "packageIcon.png"
       ]
     },
-    "NovaPay.Integrator.Common.Data/1.1.30": {
-      "sha512": "ht0sKcgvUoOOBYstq6zlymoAImrF0ty+8ttUr4zMbxU2InS3CYbSYXmF1qmnHwRAxKR/+C8JUTc7srMRW+I8Zw==",
+    "NovaPay.Integrator.Common.Data/1.1.34": {
+      "sha512": "7ohi20gmC+xdS0zHaZJrv3ZbFOqj9hQ5/G41bXR9vuPN3Lrj5J6kDxA/HyKsi3/RK34vaYes8a6I0WfCwvFhZw==",
       "type": "package",
-      "path": "novapay.integrator.common.data/1.1.30",
+      "path": "novapay.integrator.common.data/1.1.34",
       "files": [
         ".nupkg.metadata",
         "lib/net6.0/NovaPay.Integrator.Common.Data.dll",
         "lib/net6.0/NovaPay.Integrator.Common.Data.runtimeconfig.json",
-        "novapay.integrator.common.data.1.1.30.nupkg.sha512",
+        "novapay.integrator.common.data.1.1.34.nupkg.sha512",
         "novapay.integrator.common.data.nuspec"
       ]
     },
-    "NovaPay.Integrator.Common.Services/1.0.17": {
-      "sha512": "rwWPJ2ZS02rg70A9PpchizvRdZkmWw9xKizLLQu5WzAGLBIl/DAjO5qSL0WDYtXBsuPaPmuuom3QNeRlFFIU0A==",
+    "NovaPay.Integrator.Common.Services/1.0.20": {
+      "sha512": "37SN6qaxM///NMVnI/AqPQXnp/hdY++WqezlmVu46d0IKiGW4f35FMMSccCaxNjqzWA/Oggw99EH/5VizAG/Rw==",
       "type": "package",
-      "path": "novapay.integrator.common.services/1.0.17",
+      "path": "novapay.integrator.common.services/1.0.20",
       "files": [
         ".nupkg.metadata",
         "lib/net6.0/NovaPay.Integrator.Common.Services.dll",
-        "novapay.integrator.common.services.1.0.17.nupkg.sha512",
+        "novapay.integrator.common.services.1.0.20.nupkg.sha512",
         "novapay.integrator.common.services.nuspec"
       ]
     },
@@ -4576,7 +4576,7 @@
         "zxing.net.nuspec"
       ]
     },
-    "NovaPay.Integrator.Adapters/1.0.3": {
+    "NovaPay.Integrator.Adapters/1.0.7": {
       "type": "project",
       "path": "../NovaPay.Integrator.Adapters/NovaPay.Integrator.Adapters.csproj",
       "msbuildProject": "../NovaPay.Integrator.Adapters/NovaPay.Integrator.Adapters.csproj"
@@ -4584,7 +4584,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "NovaPay.Integrator.Adapters >= 1.0.3"
+      "NovaPay.Integrator.Adapters >= 1.0.7"
     ]
   },
   "packageFolders": {

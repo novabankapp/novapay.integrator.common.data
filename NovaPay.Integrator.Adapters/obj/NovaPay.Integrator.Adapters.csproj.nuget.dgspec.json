@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Adapters\\NovaPay.Integrator.Adapters.csproj": {
-      "version": "1.0.3",
+      "version": "1.0.7",
       "restore": {
         "projectUniqueName": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Adapters\\NovaPay.Integrator.Adapters.csproj",
         "projectName": "NovaPay.Integrator.Adapters",
@@ -44,7 +44,7 @@
           "dependencies": {
             "NovaPay.Integrator.Common.Services": {
               "target": "Package",
-              "version": "[1.0.17, )"
+              "version": "[1.0.20, )"
             }
           },
           "imports": [

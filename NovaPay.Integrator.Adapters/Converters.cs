@@ -33,8 +33,13 @@ namespace NovaPay.Integrator.Adapters
         }
         public static Task<TransactionResponse> ConvertTransactionResponse(string response, Dictionary<string, string> fields)
         {
+            if(fields.Count == 0)
+            {
+                return Task.FromResult(JsonConvert.DeserializeObject<TransactionResponse>(response));
+            }   
             var expandoConverter = new ExpandoObjectConverter();
             var transactionResponse = new TransactionResponse();
+            
             dynamic res = JsonConvert.DeserializeObject<ExpandoObject>(response, expandoConverter);
             Type resType = res.GetType();
             Type validationType = transactionResponse.GetType();
@@ -65,6 +70,10 @@ namespace NovaPay.Integrator.Adapters
         }
         public  static Task<ValidationResponse> ConvertValidationResponse(string response, Dictionary<string, string> fields)
         {
+            if (fields.Count == 0)
+            {
+                return Task.FromResult(JsonConvert.DeserializeObject<ValidationResponse>(response));
+            }
             var expandoConverter = new ExpandoObjectConverter();
             var validationResponse = new ValidationResponse();
             dynamic res = JsonConvert.DeserializeObject<ExpandoObject>(response, expandoConverter);

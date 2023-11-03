@@ -19,6 +19,21 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 .HasAnnotation("ProductVersion", "7.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("FinancialInstitutionMerchant", b =>
+                {
+                    b.Property<int>("AllowedBanksRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AllowedMerchantsRecordId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AllowedBanksRecordId", "AllowedMerchantsRecordId");
+
+                    b.HasIndex("AllowedMerchantsRecordId");
+
+                    b.ToTable("FinancialInstitutionMerchant");
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.CustomerReference", b =>
                 {
                     b.Property<int>("RecordId")
@@ -496,6 +511,77 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     b.ToTable("ProcessedTransactions");
                 });
 
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductReferenceNumber", b =>
+                {
+                    b.Property<int>("RecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime?>("ExpiryDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("MerchantRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Metadata")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PRN")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ProductDetails")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ProductReference")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("QRCodePath")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("RecordId");
+
+                    b.HasIndex("MerchantRecordId");
+
+                    b.ToTable("ProductReferenceNumbers");
+                });
+
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductTransaction", b =>
+                {
+                    b.Property<int>("RecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("FinancialInstitutionRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FinancialServiceUniqueIdentifier")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ReferenceNumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal>("TransactionAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("TransactionRef")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("RecordId");
+
+                    b.HasIndex("FinancialInstitutionRecordId");
+
+                    b.ToTable("ProductTransactions");
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.RefreshToken", b =>
                 {
                     b.Property<int>("RecordId")
@@ -626,6 +712,9 @@ namespace NovaPay.Integrator.Common.Data.Migrations
 
                     b.Property<string>("QRCodePath")
                         .HasColumnType("longtext");
+
+                    b.Property<bool>("Reusable")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("ServiceUniqueIdentifier")
                         .HasColumnType("longtext");
@@ -782,6 +871,21 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     b.ToTable("UserConnections");
                 });
 
+            modelBuilder.Entity("FinancialInstitutionMerchant", b =>
+                {
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", null)
+                        .WithMany()
+                        .HasForeignKey("AllowedBanksRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.Merchant", null)
+                        .WithMany()
+                        .HasForeignKey("AllowedMerchantsRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", b =>
                 {
                     b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitutionCategory", "FinancialInstitutionCategory")
@@ -930,6 +1034,28 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductReferenceNumber", b =>
+                {
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.Merchant", "Merchant")
+                        .WithMany("PRNs")
+                        .HasForeignKey("MerchantRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Merchant");
+                });
+
+            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductTransaction", b =>
+                {
+                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", "FinancialInstitution")
+                        .WithMany()
+                        .HasForeignKey("FinancialInstitutionRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FinancialInstitution");
+                });
+
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.RefreshToken", b =>
                 {
                     b.HasOne("NovaPay.Integrator.Common.Data.Entities.User", "User")
@@ -1002,6 +1128,8 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     b.Navigation("MerchantProcesses");
 
                     b.Navigation("MerchantValidationResponseMappings");
+
+                    b.Navigation("PRNs");
 
                     b.Navigation("RequestLogs");
 

@@ -1763,7 +1763,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Data/1.1.33": {
+      "NovaPay.Integrator.Common.Data/1.1.37": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -4517,7 +4517,7 @@
         "zxing.net.nuspec"
       ]
     },
-    "NovaPay.Integrator.Common.Data/1.1.33": {
+    "NovaPay.Integrator.Common.Data/1.1.37": {
       "type": "project",
       "path": "../NovaPay.Integrator.Common.Data/NovaPay.Integrator.Common.Data.csproj",
       "msbuildProject": "../NovaPay.Integrator.Common.Data/NovaPay.Integrator.Common.Data.csproj"
@@ -4529,7 +4529,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.14",
       "Microsoft.Extensions.Configuration.Abstractions >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 7.0.0",
-      "NovaPay.Integrator.Common.Data >= 1.1.33",
+      "NovaPay.Integrator.Common.Data >= 1.1.37",
       "QRCoder >= 1.4.3",
       "SixLabors.ImageSharp >= 3.0.1",
       "System.Drawing.Common >= 7.0.0",
@@ -4540,7 +4540,7 @@
     "C:\\Users\\LENOVO-LEGION 5\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.18",
+    "version": "1.0.20",
     "restore": {
       "projectUniqueName": "C:\\Users\\LENOVO-LEGION 5\\source\\repos\\NovaPay.Integrator.Common\\NovaPay.Integrator.Common.Services\\NovaPay.Integrator.Common.Services.csproj",
       "projectName": "NovaPay.Integrator.Common.Services",

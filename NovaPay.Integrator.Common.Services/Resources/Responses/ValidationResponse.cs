@@ -10,9 +10,9 @@ namespace NovaPay.Integrator.Common.Services.Resources.Responses
 {
     public class ValidationResponse
     {
-        [JsonPropertyName("customer_name")]
-        [JsonProperty("customer_name")]
-        public string? CustomerName { get; set; }
+        [JsonPropertyName("name")]
+        [JsonProperty("name")]
+        public string? Name { get; set; }
         [JsonPropertyName("success")]
         [JsonProperty("success")]
         public bool Success { get; set; }

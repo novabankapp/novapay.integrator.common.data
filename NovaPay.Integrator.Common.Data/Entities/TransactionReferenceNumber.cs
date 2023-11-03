@@ -31,6 +31,8 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public bool Used { get; set; }
 
+        public bool Reusable { get; set; }
+
         public string UserId { get; set; }
 
         public string? ServiceUniqueIdentifier { get; set;}

@@ -1,5 +1,6 @@
 ﻿
 using Common.Libraries.Services.Dtos;
+using NovaPay.Integrator.Common.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace NovaPay.Integrator.Common.Data.DTOs
         public bool IsActive { get; set; }
 
         public ICollection<RequestLogDto>? RequestLogs { get; set; }
+
+        public ICollection<MerchantDto>? AllowedMerchants { get; set; }
         public DateTime? CreatedAt { get; set; }
     }
 }

@@ -14,6 +14,10 @@ namespace NovaPay.Integrator.Common.Context
 
         public DbSet<FinancialInstitution>? FinancialInstitutions { get; set; }
 
+        public DbSet<ProductReferenceNumber>? ProductReferenceNumbers { get; set; }
+
+        public DbSet<ProductTransaction>? ProductTransactions { get; set; }
+
         public DbSet<CustomerReference> CustomerReferences { get; set; }
 
         public DbSet<ProcessedTransaction> ProcessedTransactions { get; set; }

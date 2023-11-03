@@ -33,7 +33,11 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public ICollection<MerchantPaymentResponseMapping> MerchantPaymentResponseMappings { get; set; }
 
+        public ICollection<FinancialInstitution> AllowedBanks { get; set;}
+
         public ICollection<TransactionReferenceNumber>? TRNs { get; set; }
+
+        public ICollection<ProductReferenceNumber>? PRNs { get; set; }
 
         public MerchantCategory? MerchantCategory { get; set; } 
 

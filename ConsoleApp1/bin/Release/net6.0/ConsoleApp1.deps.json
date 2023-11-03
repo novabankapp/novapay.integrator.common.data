@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleApp1/1.0.0": {
         "dependencies": {
-          "NovaPay.Integrator.Adapters": "1.0.0"
+          "NovaPay.Integrator.Adapters": "1.0.3"
         },
         "runtime": {
           "ConsoleApp1.dll": {}
@@ -1175,7 +1175,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Adapters/1.0.0": {
+      "NovaPay.Integrator.Adapters/1.0.3": {
         "dependencies": {
           "NovaPay.Integrator.Common.Services": "1.0.17"
         },
@@ -1912,7 +1912,7 @@
       "path": "zxing.net/0.16.9",
       "hashPath": "zxing.net.0.16.9.nupkg.sha512"
     },
-    "NovaPay.Integrator.Adapters/1.0.0": {
+    "NovaPay.Integrator.Adapters/1.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

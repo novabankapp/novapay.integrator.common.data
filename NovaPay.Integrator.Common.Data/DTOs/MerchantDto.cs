@@ -23,6 +23,8 @@ namespace NovaPay.Integrator.Common.Data.DTOs
 
         public ICollection<MerchantProcessDto>? MerchantProcesses { get; set; }
 
+        public ICollection<FinancialInstitutionDto>? AllowedBanks { get; set; }
+
         public MerchantConfigDto? MerchantConfig { get; set; }
 
         public ICollection<RequestLogDto>? RequestLogs { get; set; }

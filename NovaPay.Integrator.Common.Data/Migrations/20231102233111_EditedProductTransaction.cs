@@ -7,7 +7,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace NovaPay.Integrator.Common.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class EditedProductTransaction : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -279,6 +279,56 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "ProductTransactions",
+                columns: table => new
+                {
+                    RecordId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    TransactionAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    FinancialInstitutionRecordId1 = table.Column<int>(type: "int", nullable: true),
+                    FinancialInstitutionRecordId = table.Column<string>(type: "longtext", nullable: true),
+                    ReferenceNumber = table.Column<string>(type: "longtext", nullable: true),
+                    FinancialServiceUniqueIdentifier = table.Column<string>(type: "longtext", nullable: true),
+                    TransactionRef = table.Column<string>(type: "longtext", nullable: true),
+                    TransactionDate = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductTransactions", x => x.RecordId);
+                    table.ForeignKey(
+                        name: "FK_ProductTransactions_FinancialInstitutions_FinancialInstituti~",
+                        column: x => x.FinancialInstitutionRecordId1,
+                        principalTable: "FinancialInstitutions",
+                        principalColumn: "RecordId");
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "FinancialInstitutionMerchant",
+                columns: table => new
+                {
+                    AllowedBanksRecordId = table.Column<int>(type: "int", nullable: false),
+                    AllowedMerchantsRecordId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FinancialInstitutionMerchant", x => new { x.AllowedBanksRecordId, x.AllowedMerchantsRecordId });
+                    table.ForeignKey(
+                        name: "FK_FinancialInstitutionMerchant_FinancialInstitutions_AllowedBa~",
+                        column: x => x.AllowedBanksRecordId,
+                        principalTable: "FinancialInstitutions",
+                        principalColumn: "RecordId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FinancialInstitutionMerchant_Merchants_AllowedMerchantsRecor~",
+                        column: x => x.AllowedMerchantsRecordId,
+                        principalTable: "Merchants",
+                        principalColumn: "RecordId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "MerchantConfigs",
                 columns: table => new
                 {
@@ -305,11 +355,10 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 {
                     RecordId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    MerchantConfigRecordId = table.Column<int>(type: "int", nullable: false),
+                    MerchantRecordId = table.Column<int>(type: "int", nullable: false),
                     MerchantResponseField = table.Column<string>(type: "longtext", nullable: false),
                     LocalResponseField = table.Column<string>(type: "longtext", nullable: false),
-                    LastUpdated = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    MerchantRecordId = table.Column<int>(type: "int", nullable: true)
+                    LastUpdated = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -318,7 +367,8 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         name: "FK_MerchantPaymentResponseMappings_Merchants_MerchantRecordId",
                         column: x => x.MerchantRecordId,
                         principalTable: "Merchants",
-                        principalColumn: "RecordId");
+                        principalColumn: "RecordId",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -353,11 +403,10 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 {
                     RecordId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    MerchantConfigRecordId = table.Column<int>(type: "int", nullable: false),
+                    MerchantRecordId = table.Column<int>(type: "int", nullable: false),
                     MerchantResponseField = table.Column<string>(type: "longtext", nullable: false),
                     LocalResponseField = table.Column<string>(type: "longtext", nullable: false),
-                    LastUpdated = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    MerchantRecordId = table.Column<int>(type: "int", nullable: true)
+                    LastUpdated = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -366,7 +415,36 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         name: "FK_MerchantValidationResponseMappings_Merchants_MerchantRecordId",
                         column: x => x.MerchantRecordId,
                         principalTable: "Merchants",
-                        principalColumn: "RecordId");
+                        principalColumn: "RecordId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "ProductReferenceNumbers",
+                columns: table => new
+                {
+                    RecordId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    PRN = table.Column<string>(type: "longtext", nullable: true),
+                    ProductReference = table.Column<string>(type: "longtext", nullable: true),
+                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    MerchantRecordId = table.Column<int>(type: "int", nullable: false),
+                    ProductDetails = table.Column<string>(type: "longtext", nullable: true),
+                    QRCodePath = table.Column<string>(type: "longtext", nullable: true),
+                    Metadata = table.Column<string>(type: "longtext", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    ExpiryDate = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductReferenceNumbers", x => x.RecordId);
+                    table.ForeignKey(
+                        name: "FK_ProductReferenceNumbers_Merchants_MerchantRecordId",
+                        column: x => x.MerchantRecordId,
+                        principalTable: "Merchants",
+                        principalColumn: "RecordId",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -415,6 +493,7 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                     CustomerReference = table.Column<string>(type: "longtext", nullable: true),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     Used = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    Reusable = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     UserId = table.Column<string>(type: "longtext", nullable: false),
                     ServiceUniqueIdentifier = table.Column<string>(type: "longtext", nullable: true),
                     FinancialServiceUniqueIdentifier = table.Column<string>(type: "longtext", nullable: true),
@@ -590,6 +669,11 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_FinancialInstitutionMerchant_AllowedMerchantsRecordId",
+                table: "FinancialInstitutionMerchant",
+                column: "AllowedMerchantsRecordId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FinancialInstitutions_FinancialInstitutionCategoryRecordId",
                 table: "FinancialInstitutions",
                 column: "FinancialInstitutionCategoryRecordId");
@@ -680,6 +764,16 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductReferenceNumbers_MerchantRecordId",
+                table: "ProductReferenceNumbers",
+                column: "MerchantRecordId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductTransactions_FinancialInstitutionRecordId1",
+                table: "ProductTransactions",
+                column: "FinancialInstitutionRecordId1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RefreshTokens_UserId",
                 table: "RefreshTokens",
                 column: "UserId");
@@ -726,6 +820,9 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 name: "FinancialInstitutionConfigs");
 
             migrationBuilder.DropTable(
+                name: "FinancialInstitutionMerchant");
+
+            migrationBuilder.DropTable(
                 name: "MerchantApiKeyConfig");
 
             migrationBuilder.DropTable(
@@ -751,6 +848,12 @@ namespace NovaPay.Integrator.Common.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProcessedTransactions");
+
+            migrationBuilder.DropTable(
+                name: "ProductReferenceNumbers");
+
+            migrationBuilder.DropTable(
+                name: "ProductTransactions");
 
             migrationBuilder.DropTable(
                 name: "RefreshTokens");

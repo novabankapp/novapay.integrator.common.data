@@ -1655,7 +1655,7 @@
           }
         }
       },
-      "NovaPay.Integrator.Common.Data/1.1.33": {
+      "NovaPay.Integrator.Common.Data/1.1.37": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -4263,7 +4263,7 @@
         "version.txt"
       ]
     },
-    "NovaPay.Integrator.Common.Data/1.1.33": {
+    "NovaPay.Integrator.Common.Data/1.1.37": {
       "type": "project",
       "path": "../NovaPay.Integrator.Common.Data/NovaPay.Integrator.Common.Data.csproj",
       "msbuildProject": "../NovaPay.Integrator.Common.Data/NovaPay.Integrator.Common.Data.csproj"
@@ -4273,7 +4273,7 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
-      "NovaPay.Integrator.Common.Data >= 1.1.33",
+      "NovaPay.Integrator.Common.Data >= 1.1.37",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },

@@ -14,6 +14,8 @@ namespace NovaPay.Integrator.Common.Data.DTOs
 
         public string? TRN { get; set; }
 
+        public bool Reusable { get; set; }
+
         public string? CustomerReference { get; set; }
 
         public string? CustomerDetails { get; set; }

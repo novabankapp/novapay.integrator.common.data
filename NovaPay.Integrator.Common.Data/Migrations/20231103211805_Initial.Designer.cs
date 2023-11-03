@@ -11,8 +11,8 @@ using NovaPay.Integrator.Common.Context;
 namespace NovaPay.Integrator.Common.Data.Migrations
 {
     [DbContext(typeof(NovaIntegratorContext))]
-    [Migration("20231102233111_EditedProductTransaction")]
-    partial class EditedProductTransaction
+    [Migration("20231103211805_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -560,10 +560,7 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("FinancialInstitutionRecordId")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("FinancialInstitutionRecordId1")
+                    b.Property<int>("FinancialInstitutionRecordId")
                         .HasColumnType("int");
 
                     b.Property<string>("FinancialServiceUniqueIdentifier")
@@ -583,7 +580,7 @@ namespace NovaPay.Integrator.Common.Data.Migrations
 
                     b.HasKey("RecordId");
 
-                    b.HasIndex("FinancialInstitutionRecordId1");
+                    b.HasIndex("FinancialInstitutionRecordId");
 
                     b.ToTable("ProductTransactions");
                 });
@@ -1055,7 +1052,9 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                 {
                     b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", "FinancialInstitution")
                         .WithMany()
-                        .HasForeignKey("FinancialInstitutionRecordId1");
+                        .HasForeignKey("FinancialInstitutionRecordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("FinancialInstitution");
                 });

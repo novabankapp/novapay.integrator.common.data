@@ -13,7 +13,7 @@ var dict = new Dictionary<string, string>
     { "Customer", "CustomerName" }
 };
 var response = await  Converters.ConvertValidationResponse(JsonConvert.SerializeObject(res), dict);
-Console.WriteLine($"This is the name => {response.CustomerName}");
+Console.WriteLine($"This is the name => {response.Name}");
 
 
 class Response

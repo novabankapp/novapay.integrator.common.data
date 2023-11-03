@@ -557,9 +557,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("FinancialInstitutionRecordId")
-                        .HasColumnType("int");
-
                     b.Property<string>("FinancialServiceUniqueIdentifier")
                         .HasColumnType("longtext");
 
@@ -576,8 +573,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("RecordId");
-
-                    b.HasIndex("FinancialInstitutionRecordId");
 
                     b.ToTable("ProductTransactions");
                 });
@@ -1043,17 +1038,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Merchant");
-                });
-
-            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductTransaction", b =>
-                {
-                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", "FinancialInstitution")
-                        .WithMany()
-                        .HasForeignKey("FinancialInstitutionRecordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FinancialInstitution");
                 });
 
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.RefreshToken", b =>

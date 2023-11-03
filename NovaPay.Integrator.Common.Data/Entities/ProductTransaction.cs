@@ -17,10 +17,6 @@ namespace NovaPay.Integrator.Common.Data.Entities
 
         public decimal TransactionAmount { get; set; }
 
-        public FinancialInstitution? FinancialInstitution { get; set; }
-
-        public int FinancialInstitutionRecordId { get; set; }
-
         public string? ReferenceNumber { get; set; }
 
         public string? FinancialServiceUniqueIdentifier { get; set; }

@@ -11,8 +11,8 @@ using NovaPay.Integrator.Common.Context;
 namespace NovaPay.Integrator.Common.Data.Migrations
 {
     [DbContext(typeof(NovaIntegratorContext))]
-    [Migration("20231102234925_EditedProductTransaction2")]
-    partial class EditedProductTransaction2
+    [Migration("20231103224804_RemovedFinancialInstitutionFromProductTransaction")]
+    partial class RemovedFinancialInstitutionFromProductTransaction
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -560,9 +560,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("FinancialInstitutionRecordId")
-                        .HasColumnType("int");
-
                     b.Property<string>("FinancialServiceUniqueIdentifier")
                         .HasColumnType("longtext");
 
@@ -579,8 +576,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("RecordId");
-
-                    b.HasIndex("FinancialInstitutionRecordId");
 
                     b.ToTable("ProductTransactions");
                 });
@@ -1046,17 +1041,6 @@ namespace NovaPay.Integrator.Common.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Merchant");
-                });
-
-            modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.ProductTransaction", b =>
-                {
-                    b.HasOne("NovaPay.Integrator.Common.Data.Entities.FinancialInstitution", "FinancialInstitution")
-                        .WithMany()
-                        .HasForeignKey("FinancialInstitutionRecordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FinancialInstitution");
                 });
 
             modelBuilder.Entity("NovaPay.Integrator.Common.Data.Entities.RefreshToken", b =>
